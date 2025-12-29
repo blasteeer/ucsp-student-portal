@@ -1,13 +1,31 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Header } from "@/components/Header";
+import { HeroSection } from "@/components/HeroSection";
+import { ServicesSection } from "@/components/ServicesSection";
+import { QuickActions } from "@/components/QuickActions";
+import { Footer } from "@/components/Footer";
+import { Helmet } from "react-helmet";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <>
+      <Helmet>
+        <title>Portal de Servicios | Universidad Católica San Pablo</title>
+        <meta
+          name="description"
+          content="Portal de servicios estudiantiles de la Universidad Católica San Pablo. Accede a trámites académicos, inscripción a eventos, consulta de notas y más."
+        />
+      </Helmet>
+      
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main>
+          <HeroSection />
+          <ServicesSection />
+          <QuickActions />
+        </main>
+        <Footer />
       </div>
-    </div>
+    </>
   );
 };
 
