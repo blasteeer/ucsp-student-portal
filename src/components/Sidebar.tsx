@@ -1,6 +1,10 @@
 import { User, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
+interface SidebarProps {
+  onNavigate: (view: string) => void;
+}
+
 const menuItems = [
   {
     category: "Proceso de Administración",
@@ -51,7 +55,15 @@ const menuItems = [
   },
 ];
 
-export const Sidebar = () => {
+export const Sidebar = ({ onNavigate }: SidebarProps) => {
+  const handleItemClick = (item: string) => {
+    if (item === "Notas registradas") {
+      onNavigate("notas");
+    } else {
+      onNavigate("inicio");
+    }
+  };
+
   return (
     <aside className="w-56 border-r border-border bg-card flex flex-col">
       {/* User Info */}
@@ -89,7 +101,10 @@ export const Sidebar = () => {
             <ul>
               {section.items.map((item) => (
                 <li key={item}>
-                  <button className="w-full text-left px-2 py-1 text-xs text-foreground hover:bg-secondary rounded flex items-center gap-1.5">
+                  <button
+                    onClick={() => handleItemClick(item)}
+                    className="w-full text-left px-2 py-1 text-xs text-foreground hover:bg-secondary rounded flex items-center gap-1.5"
+                  >
                     <span className="w-3 h-3 border border-border bg-secondary flex-shrink-0" />
                     <span className="truncate">{item}</span>
                   </button>

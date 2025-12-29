@@ -31,11 +31,11 @@ export const MainContent = () => {
               </div>
               <div>
                 <span className="text-muted-foreground">Programa:</span>
-                <p className="font-medium">Ingeniería de Sistemas</p>
+                <p className="font-medium">Derecho</p>
               </div>
               <div>
                 <span className="text-muted-foreground">Periodo Actual:</span>
-                <p className="font-medium">2025-I</p>
+                <p className="font-medium">2025-II</p>
               </div>
             </div>
           </div>
