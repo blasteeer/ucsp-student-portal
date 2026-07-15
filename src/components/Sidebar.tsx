@@ -59,6 +59,8 @@ export const Sidebar = ({ onNavigate }: SidebarProps) => {
   const handleItemClick = (item: string) => {
     if (item === "Notas registradas") {
       onNavigate("notas");
+    } else if (item === "Histórico de notas") {
+      onNavigate("historico");
     } else {
       onNavigate("inicio");
     }
