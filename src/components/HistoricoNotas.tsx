@@ -15,11 +15,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import notasPdf from "@/assets/notr62_2.pdf.asset.json";
+import historicoPdf from "@/assets/matr87_2.pdf.asset.json";
 
-export const NotasRegistradas = () => {
+export const HistoricoNotas = () => {
   const handleGenerarPDF = () => {
-    window.open(notasPdf.url, "_blank");
+    window.open(historicoPdf.url, "_blank");
   };
 
   const handleGenerarHTML = () => {
@@ -31,7 +31,7 @@ export const NotasRegistradas = () => {
       {/* Breadcrumb */}
       <div className="flex items-center gap-1 text-xs text-muted-foreground mb-4">
         <Circle className="h-2 w-2 fill-green-500 text-green-500" />
-        <span>Notas registradas</span>
+        <span>Histórico de notas</span>
       </div>
 
       {/* Action Buttons */}
@@ -115,7 +115,7 @@ export const NotasRegistradas = () => {
       {/* Bottom info section */}
       <div className="mt-8 bg-secondary/50 p-3 text-xs">
         <p className="font-semibold text-foreground mb-1">Visión general:</p>
-        <p className="text-muted-foreground">Notas registradas (NOTREG): Contenido...</p>
+        <p className="text-muted-foreground">Histórico de notas (MATR87): Contenido...</p>
       </div>
     </main>
   );
